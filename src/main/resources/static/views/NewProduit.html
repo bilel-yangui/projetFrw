@@ -1,0 +1,74 @@
+
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../css/MyStyle.css"/>
+<title>Test angular</title>
+</head>
+
+<div>
+	<div class="container spacer">
+		<div
+			class="panel panel-default col-md-6 col-sm-6 col-xs-12 col-md-offset-3 spacer" ng-if="mode==0">
+			<div class="panel-heading">Saisir un produit</div>
+			<div class="panel-body">
+
+				<form>
+					<div class="form-group">
+						<label class="control-label">Nom: </label> <input type="text"
+							ng-model="produit.nom" class="form-control" />
+
+						<div>
+							<label class="control-label">Quantite: </label> <input
+								type="text" ng-model="produit.qte" class="form-control" />
+						</div>
+						<div>
+							<label class="control-label">Prix: </label> <input type="text"
+								ng-model="produit.prix" class="form-control" />
+						</div>
+						<div>
+							<label class="control-label">photo: </label> <input type="text"
+								ng-model="produit.photo" class="form-control" />
+						</div>
+						<div>
+							<button ng-click="saveProduit()" class="btn btn-primary">
+								Ajouter Produit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div
+			class="panel panel-default col-md-6 col-sm-6 col-xs-12 col-md-offset-3 spacer" ng-if="mode==1">
+			<div class="panel-heading">Confirmation : <a ng-click="modeForm()" > Nouveau produit</a></div>
+			<div class="panel-body">
+				<div class="form-group">
+					<label class="control-label">ID : </label> <label
+						class="control-label">{{produit.id}} </label>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Nom: </label> <label
+						class="control-label">{{produit.nom}} </label>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Quantite: </label> <label
+						class="control-label">{{produit.qte}} </label>
+				</div>
+				<div class="form-group">
+					<label class="control-label">Prix: </label> <label
+						class="control-label">{{produit.prix}} </label>
+				</div>
+				<div class="form-group">
+					<label class="control-label">photo: </label> <label
+						class="control-label">{{produit.photo}} </label>
+				</div>
+
+
+
+			</div>
+		</div>
+
+	</div>
+</div>
